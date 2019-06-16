@@ -1,12 +1,20 @@
 const express= require("express");
 const http = require("http");
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const mongoose =require("mongoose");
 require("dotenv/config");
 
 const app=express();
 
-app.use(bodyParser.json());
+//with body-parser 
+// app.use(bodyParser.json());
+
+
+// without body-parser
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
 
 const server= http.createServer(app);
 
