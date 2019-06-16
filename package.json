@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-restful-api",
+  "version": "1.0.0",
+  "description": "A Simple nodejs API",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sasikumar95/nodejs-restful-api.git"
+  },
+  "author": "Sasikumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sasikumar95/nodejs-restful-api/issues"
+  },
+  "homepage": "https://github.com/Sasikumar95/nodejs-restful-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.13",
+    "nodemon": "^1.19.0"
+  }
+}
