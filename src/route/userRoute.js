@@ -9,17 +9,23 @@ userRoute.get("/",(req,res)=>{
 })
 
 
-userRoute.post("/data",(req,res)=>{
+userRoute.post("/data", async (req,res)=>{
     const post = new userModel({
         name:req.body.name,
         age:req.body.age,
         address:req.body.address
     });
-    post.save().then(data=>{
-        res.json(data);
-    }).catch(err=>{
+    try{
+        const postUserData = await post.save();
+        res.json(postUserData);
+    }catch(err){
         res.json({message:err});
-    })
+    }
+    // post.save().then(data=>{
+    //     res.json(data);
+    // }).catch(err=>{
+    //     res.json({message:err});
+    // })
 })
 
 module.exports=userRoute;
